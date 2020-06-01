@@ -24,7 +24,7 @@ Phone:<input type="text" name="passengerPhone" />
 Name on the card:<input type="text" name="nameOnTheCard" />
 Card number:<input type="text" name="cardNumber" />
 Expiry date:<input type="text" name="expirationDate" />
-3 digit security number:<input type="text" name="nameOnTheCard" />
+3 digit security number:<input type="text" name="securityCode" />
 <input type="hidden" name="flightId" value="${flight.id}" />
 <input type="submit" value="confirm" />
 </pre>
