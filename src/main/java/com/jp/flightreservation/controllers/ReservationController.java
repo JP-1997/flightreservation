@@ -32,7 +32,7 @@ public class ReservationController {
 	@RequestMapping(value = "/completeReservation", method = RequestMethod.POST)
 	public String completeReservation(ReservationRequest request, ModelMap modelMap) {
 		Reservation reservation = reservationService.bookFlight(request);
-		modelMap.addAttribute("msg", "reservation created succefully and the id is " + reservation.getId());
+		modelMap.addAttribute("msg", "reservation created successfully and the id is " + reservation.getId());
 		return "reservationConfirmation";
 		
 	}
