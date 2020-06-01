@@ -1,6 +1,7 @@
 package com.jp.flightreservation.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jp.flightreservation.controllers.dto.ReservationRequest;
 import com.jp.flightreservation.entities.Flight;
@@ -10,6 +11,7 @@ import com.jp.flightreservation.repos.FlightRepository;
 import com.jp.flightreservation.repos.PassengerRepository;
 import com.jp.flightreservation.repos.ReservationRepository;
 
+@Service
 public class ReservationServiceImpl implements ReservationService {
 
 	@Autowired
