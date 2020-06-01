@@ -16,6 +16,7 @@ User Name: <input type="text" name="email" />
 Password: <input type="password" name="password" />
 Confirm Password: <input type="password" name="confirmPassword" />
 <input type="submit" value="register" />
+Already a member?<a href="showLogin">Click here</a> to go to the login page.
 </pre>
 </form>
 </body>
