@@ -3,6 +3,8 @@ package com.jp.flightreservation.util;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import com.itextpdf.text.Document;
@@ -15,8 +17,12 @@ import com.jp.flightreservation.entities.Reservation;
 
 @Component
 public class PDFGenerator {
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(PDFGenerator.class);
+
 
 	public void generateItinerary(Reservation reservation, String filePath) {
+		LOGGER.info("inside generateItinerary()");
 		Document document = new Document();
 		try {
 			PdfWriter.getInstance(document, new FileOutputStream(filePath));
@@ -24,6 +30,7 @@ public class PDFGenerator {
 			document.add(generateTable(reservation));
 			document.close();
 		} catch (FileNotFoundException | DocumentException e) {
+			LOGGER.error("Exception in generateItinerary()"+e);
 			e.printStackTrace();
 		}
 	}
